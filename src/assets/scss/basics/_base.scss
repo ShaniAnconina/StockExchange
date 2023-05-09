@@ -1,0 +1,19 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    margin: 0;
+    // font-family: Macan-Regular, Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+button {
+    cursor: pointer;
+    // font-family: Macan-Regular;
+}
+
+input:focus-visible,
+select:focus-visible {
+    outline: none;
+}
