@@ -4,7 +4,7 @@ import { loadTraders } from '../store/trader/trader.action'
 import { useSelector } from 'react-redux'
 
 export function TraderIndex() {
-    let traders = useSelector((storeState) => storeState.traderModule.traders)
+    const traders = useSelector((storeState) => storeState.traderModule.traders)
 
     useEffect(() => {
         loadTraders()

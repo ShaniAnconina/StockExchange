@@ -8,6 +8,7 @@ import { Login } from './cmps/login'
 import { AppHeader } from './cmps/app-header'
 import { HomePage } from './pages/home-page'
 import { Provider } from 'react-redux'
+import { UserAccount } from './pages/user-account'
 
 export function App() {
 
@@ -22,7 +23,7 @@ export function App() {
               <Route element={<HomePage />} path="/" />
               <Route element={<Login />} path="/login" />
               <Route element={<TraderIndex />} path="/trader" />
-              {/* <Route element={<User />} path="/user" /> */}
+              <Route element={<UserAccount />} path="/account" />
             </Routes>
           </main>
           {/* <AppFooter /> */}
