@@ -1,20 +1,21 @@
 import { useEffect } from "react"
-import { httpService } from "../services/http.service"
+import { loadShares } from "../store/share/share.action"
+import { useSelector } from "react-redux"
+import { ShareList } from "../cmps/share/share-list"
 
 export function HomePage() {
+    const shares = useSelector((storeState) => storeState.shareModule.shares)
 
     useEffect(() => {
-        // loadTraders()
-        // const data = await httpService.get('get_trader_names')
-        // console.log('data:', data)
+        loadShares()
+        console.log('shares:', shares)
     }, []
     )
 
     return (
         <section className='home-page'>
             <h1>homepage</h1>
-        {/* <ShareList */}
-        {/* all_share_details */}
+            {shares && <ShareList shares={shares} />}
         </section>
     )
 }

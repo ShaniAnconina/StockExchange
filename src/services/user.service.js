@@ -6,7 +6,6 @@ export const userService = {
     getEmptyCredentials,
     login,
     logout,
-    // getById,
     getLoggedinUser
 }
 
@@ -32,13 +31,7 @@ async function login(userCred) {
 
 async function logout() {
     localStorage.removeItem(STORAGE_KEY_LOGGEDIN)
-    // localStorage.clear()
 }
-
-// async function getById(userId) {
-//     const user = await httpService.get(`user/${userId}`)
-//     return user
-// }
 
 function getLoggedinUser() {
     return JSON.parse(localStorage.getItem(STORAGE_KEY_LOGGEDIN))

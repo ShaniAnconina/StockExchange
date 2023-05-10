@@ -1,7 +1,7 @@
-import { useEffect, useState } from 'react'
-import { TraderList } from '../cmps/trader/trader-list'
-import { loadTraders } from '../store/trader/trader.action'
+import { useEffect } from 'react'
 import { useSelector } from 'react-redux'
+import { loadTraders } from '../store/trader/trader.action'
+import { TraderList } from '../cmps/trader/trader-list'
 
 export function TraderIndex() {
     const traders = useSelector((storeState) => storeState.traderModule.traders)

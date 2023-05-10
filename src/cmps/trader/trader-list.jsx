@@ -1,8 +1,6 @@
 import { TraderPreview } from "./trader-preview";
 
-// export function TraderList() {
-export function TraderList({traders}) {
-
+export function TraderList({ traders }) {
 
     return (
         <section className='trader-list'>
