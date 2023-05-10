@@ -1,4 +1,5 @@
 import axios from "axios"
+import { httpService } from "./http.service"
 
 const STORAGE_KEY_LOGGEDIN = 'user_DB'
 
@@ -6,7 +7,9 @@ export const userService = {
     getEmptyCredentials,
     login,
     logout,
-    getLoggedinUser
+    getLoggedinUser,
+    query,
+    buyShare
 }
 
 function getEmptyCredentials() {
@@ -26,11 +29,39 @@ async function login(userCred) {
         params: { trader_id: userCred.id }
     })
     _setLoggedinUser(user.data)
-    return user
+    return user.data
 }
 
 async function logout() {
     localStorage.removeItem(STORAGE_KEY_LOGGEDIN)
+}
+async function buyShare({ trader_id, share_id, amount, price_per_share, is_sell }) { //amount is the count off shares && price_per_share is the price per one share
+    try {
+        const request = await axios({
+            url: `//localhost:8000/place_order`,
+            method: 'POST',
+            data: null,
+            params: { trader_id, share_id, amount, price_per_share, is_sell }
+        })
+        return request
+    } catch (err) {
+        throw err
+    }
+}
+
+async function query(traderId) {
+    try {
+        const transactions = await axios({
+            url: `//localhost:8000/get_last_trader_transactions`,
+            method: 'GET',
+            data: null,
+            params: { trader_id: traderId }
+        })
+        console.log('transactions:', transactions)
+        return transactions.data
+    } catch (err) {
+        throw err
+    }
 }
 
 function getLoggedinUser() {

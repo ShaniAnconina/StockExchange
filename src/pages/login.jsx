@@ -29,14 +29,17 @@ export function Login() {
     return (
         <section className='login'>
             {!loggedinUser && <form className="login-form" onSubmit={onSubmit}>
-                <p>Hey trader!<br />Please enter your trader ID to login</p>
-                < input type="number"
-                    name="id"
-                    value={credentials.id}
-                    placeholder="Trader ID"
-                    onChange={handleChange}
-                />
-                <button>Login</button>
+                <h1>Hellow Trader,</h1>
+                <h2>Please enter your trader ID to login</h2>
+                <div className="login-form">
+                    < input type="number"
+                        name="id"
+                        value={credentials.id}
+                        placeholder="Trader ID"
+                        onChange={handleChange}
+                    />
+                    <button>Login</button>
+                </div>
             </form>}
         </section >
     )

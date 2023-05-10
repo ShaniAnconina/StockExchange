@@ -5,12 +5,23 @@
 body {
     font-size: 16px;
     margin: 0;
-    // font-family: Macan-Regular, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1 {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.2rem;
+    text-align: center;
 }
 
 button {
     cursor: pointer;
-    // font-family: Macan-Regular;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
 }
 
 input:focus-visible,

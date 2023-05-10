@@ -42,7 +42,7 @@ async function get(shareId) {
     params: { share_id: shareId }
   })
   console.log('share:', share)
-  return share
+  return share.data
 }
 
 // function getSharesByUser(userId) {

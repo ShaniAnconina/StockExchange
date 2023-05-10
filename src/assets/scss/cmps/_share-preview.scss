@@ -1,0 +1,21 @@
+.share-preview {
+    margin: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.178);
+    min-height: 200px;
+    background-color: $clr2;
+
+    button{
+        background-color: transparent;
+        border-radius: 30px;
+        border: 1px $clr9 solid;
+        padding: 5px 20px;
+        margin: 10px;
+        transition: .3s background-color;
+
+        &:hover {
+            background-color: $clr9;
+        }
+    }
+}

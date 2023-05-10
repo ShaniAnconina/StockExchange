@@ -1,14 +1,13 @@
 import './assets/scss/styles.scss'
-import { store } from './store/store'
-
 import React from 'react'
-import { Route, HashRouter as Router, Routes } from 'react-router-dom'
-import { TraderIndex } from './pages/trader-index'
-import { Login } from './cmps/login'
-import { AppHeader } from './cmps/app-header'
-import { HomePage } from './pages/home-page'
 import { Provider } from 'react-redux'
-import { UserAccount } from './pages/user-account'
+import { Route, HashRouter as Router, Routes } from 'react-router-dom'
+import { store } from './store/store'
+import { HomePage } from './pages/home-page'
+import { TraderIndex } from './pages/trader-index'
+import { AccountIndex } from './pages/account-index'
+import { AppHeader } from './cmps/app-header'
+import { Login } from './pages/login'
 
 export function App() {
 
@@ -16,19 +15,19 @@ export function App() {
     <Provider store={store}>
 
       <Router>
-        <section className="App">
+        <section className="App full main-layout">
           <AppHeader />
-          <main className="full">
+          <main className="full main-layout">
             <Routes>
               <Route element={<HomePage />} path="/" />
               <Route element={<Login />} path="/login" />
               <Route element={<TraderIndex />} path="/trader" />
-              <Route element={<UserAccount />} path="/account" />
+              <Route element={<AccountIndex />} path="/account" />
             </Routes>
           </main>
           {/* <AppFooter /> */}
         </section>
       </Router>
-      </Provider>
+    </Provider>
   )
 }

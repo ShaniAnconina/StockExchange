@@ -1,5 +1,5 @@
 /* Basics */
-// @import 'basics/layouts';
+@import 'basics/layouts';
 @import 'basics/base';
 // @import 'basics/helpers';
 
@@ -10,9 +10,17 @@
 // @import 'setup/functions';
 
 /* Pages */
-// @import 'pages/gig-details';
+@import 'pages/home-page';
+@import 'pages/trader-index';
+@import 'pages/account-index';
 
 
 /* Cmps */
-// @import 'cmps/app-header';
+@import 'cmps/app-header';
+@import 'cmps/login';
+@import 'cmps/trader-list';
+@import 'cmps/trader-preview';
+@import 'cmps/share-list';
+@import 'cmps/share-preview';
+@import 'cmps/share-details';
 

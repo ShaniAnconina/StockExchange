@@ -1,7 +1,7 @@
-import { useSelector } from "react-redux"
-import { NavLink, useNavigate } from "react-router-dom"
-import { logOut } from "../store/user/user.action"
-import { useEffect } from "react"
+import { useEffect } from 'react'
+import { useSelector } from 'react-redux'
+import { NavLink, useNavigate } from 'react-router-dom'
+import { logOut } from '../store/user/user.action'
 
 
 export function AppHeader() {
@@ -10,7 +10,6 @@ export function AppHeader() {
 
     useEffect(() => {
         if (!loggedinUser) navigate('/login')
-        
     }, []
     )
 
@@ -18,6 +17,7 @@ export function AppHeader() {
         try {
             logOut()
             console.log('You logged out successfully!')
+            navigate('/login')
         }
         catch (err) {
             throw err
@@ -25,14 +25,13 @@ export function AppHeader() {
     }
 
     return (
-        <section className='app-header'>
-            <NavLink to="/" className='logo'>Stock Exchange</NavLink>
+        <section className='app-header full'>
+            <NavLink to="/" className='logo'>Stock<span>X</span>change</NavLink>
             <nav className='navbar'>
-                <NavLink to="/" >Stock Exchange</NavLink>
-                <NavLink to="/trader" >Trader</NavLink>
-                <NavLink to="/account" >User</NavLink>
+                <NavLink to="/" className='navlink'>Stock Exchange</NavLink>
+                <NavLink to="/trader" className='navlink'>Traders</NavLink>
+                <NavLink to="/account" className='navlink'>My account</NavLink>
                 {loggedinUser && <button onClick={onLogout}>Logout</button>}
-
             </nav>
         </section>
     )

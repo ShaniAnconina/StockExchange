@@ -1,0 +1,27 @@
+.share-details {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $clr8;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.432);
+    border-radius: 5px;
+    min-height: 300px;
+    min-width: 300px;
+    padding: 20px;
+    color: $clr0;
+
+    button{
+        border: 1px solid transparent;
+        border-radius: 30px;
+        padding: 5px 10px;
+        background-color: transparent;
+        color: $clr0;
+        font-size: 1.2rem;
+        transition: .2s border-color;
+
+        &:hover{
+            border-color: $clr9;
+        }
+    }
+}
