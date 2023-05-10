@@ -1,16 +1,19 @@
 import './assets/scss/styles.scss'
+import { store } from './store/store'
 
 import React from 'react'
 import { Route, HashRouter as Router, Routes } from 'react-router-dom'
-import { TraderIndex } from './cmps/trader/trader-index'
-import { HomePage } from './cmps/home-page'
+import { TraderIndex } from './pages/trader-index'
 import { Login } from './cmps/login'
 import { AppHeader } from './cmps/app-header'
+import { HomePage } from './pages/home-page'
+import { Provider } from 'react-redux'
 
 export function App() {
 
   return (
-    <>
+    <Provider store={store}>
+
       <Router>
         <section className="App">
           <AppHeader />
@@ -25,6 +28,6 @@ export function App() {
           {/* <AppFooter /> */}
         </section>
       </Router>
-    </>
+      </Provider>
   )
 }

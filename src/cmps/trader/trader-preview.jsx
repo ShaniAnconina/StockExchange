@@ -1,10 +1,10 @@
 
-export function TraderPreview() {
+export function TraderPreview({trader}) {
 
 
     return (
         <section className='trader-preview'>
-            <h1>traders preview</h1>
+            <p>{trader}</p>
 
         </section>
     )

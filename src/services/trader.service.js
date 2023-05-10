@@ -1,4 +1,4 @@
-import { httpService } from "./http.service"
+import { httpService } from './http.service'
 
 const BASE_URL = 'trader/'
 
@@ -11,7 +11,7 @@ export const traderService = {
   // getEmptyTrader,
   // addToWishlist,
   // getFeatures,
-  getTradersByUser
+  // getTradersByUser
 }
 
 // function getFeatures() {
@@ -25,8 +25,7 @@ export const traderService = {
 
 async function query() {
   try {
-    let traders = await httpService.get(BASE_URL)
-    traders = getAvgRate(traders)
+    let traders = await httpService.get('get_trader_names')
     return traders
   } catch (err) {
     throw err
@@ -37,9 +36,9 @@ function get(traderId) {
   return httpService.get(BASE_URL + traderId)
 }
 
-function getTradersByUser(userId) {
-  return httpService.get(`${BASE_URL}` + userId.toString())
-}
+// function getTradersByUser(userId) {
+//   return httpService.get(`${BASE_URL}` + userId.toString())
+// }
 
 function save(trader) {
   if (trader._id) {
