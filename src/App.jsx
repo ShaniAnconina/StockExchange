@@ -3,11 +3,11 @@ import React from 'react'
 import { Provider } from 'react-redux'
 import { Route, HashRouter as Router, Routes } from 'react-router-dom'
 import { store } from './store/store'
+import { Login } from './pages/login'
 import { HomePage } from './pages/home-page'
 import { TraderIndex } from './pages/trader-index'
 import { AccountIndex } from './pages/account-index'
 import { AppHeader } from './cmps/app-header'
-import { Login } from './pages/login'
 
 export function App() {
 
@@ -25,7 +25,6 @@ export function App() {
               <Route element={<AccountIndex />} path="/account" />
             </Routes>
           </main>
-          {/* <AppFooter /> */}
         </section>
       </Router>
     </Provider>

@@ -3,7 +3,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 15px 150px;
-    background-color: $clr8;
+    background-color: $clr1;
 
     a {
         text-decoration: none;
@@ -15,7 +15,7 @@
 
         span {
             font-size: 1.7rem;
-            color: $clr9;
+            color: $clr3;
             font-weight: 600;
         }
     }
@@ -26,11 +26,11 @@
         margin-right: 15px;
 
         &.active {
-            border-bottom: 1px solid $clr9;
+            border-bottom: 1px solid $clr3;
         }
 
         &:hover {
-            border-bottom: 1px solid $clr9;
+            border-bottom: 1px solid $clr3;
             transition: .3s border-bottom;
         }
     }
@@ -39,12 +39,12 @@
         background-color: transparent;
         color: $clr0;
         border-radius: 30px;
-        border: 1px $clr9 solid;
+        border: 1px $clr3 solid;
         padding: 5px 20px;
         transition: .3s background-color;
 
         &:hover {
-            background-color: $clr9;
+            background-color: $clr3;
         }
     }
 }

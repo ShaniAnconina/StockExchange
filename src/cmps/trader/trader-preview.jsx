@@ -1,4 +1,4 @@
-export function TraderPreview({trader}) {
+export function TraderPreview({ trader }) {
 
     return (
         <section className='trader-preview'>

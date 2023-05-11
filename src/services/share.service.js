@@ -1,31 +1,15 @@
 import axios from 'axios'
-import { httpService } from './http.service'
-
-const BASE_URL = 'share/'
 
 export const shareService = {
   query,
   get,
-  // save,
-  // remove,
-  // getDefaultFilter,
-  // getEmptyShare,
-  // addToWishlist,
-  // getFeatures,
-  // getSharesByUser
+  buyShare,
 }
-
 
 async function query() {
   try {
-    let shares = await httpService.get('all_share_details')
-    // let shares = await axios({
-    //   url: `//localhost:8000/all_share_details`,
-    //   method: 'GET',
-    //   data: null,
-    //   params: {}
-    // })
-    return shares
+    let shares = await axios.get(`//localhost:8000/all_share_details`)
+    return shares.data
   } catch (err) {
     throw err
   }
@@ -38,6 +22,20 @@ async function get(shareId) {
     data: null,
     params: { share_id: shareId }
   })
-  console.log('share:', share)
   return share.data
+}
+
+
+async function buyShare({ trader_id, share_id, amount, price_per_share, is_sell }) {
+  try {
+    const request = await axios({
+      url: `//localhost:8000/place_order`,
+      method: 'POST',
+      data: null,
+      params: { trader_id, share_id, amount, price_per_share, is_sell }
+    })
+    return request
+  } catch (err) {
+    throw err
+  }
 }

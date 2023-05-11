@@ -1,4 +1,4 @@
-import axios from "axios"
+import axios from 'axios'
 
 const STORAGE_KEY_LOGGEDIN = 'user_DB'
 
@@ -42,7 +42,6 @@ async function query(traderId) {
             data: null,
             params: { trader_id: traderId }
         })
-        console.log('transactions:', transactions)
         return transactions.data
     } catch (err) {
         throw err

@@ -1,8 +1,8 @@
-import { useState } from "react"
-import { userService } from "../services/user.service"
-import { login } from "../store/user/user.action"
-import { useSelector } from "react-redux"
-import { useNavigate } from "react-router-dom"
+import { useState } from 'react'
+import { useSelector } from 'react-redux'
+import { useNavigate } from 'react-router-dom'
+import { login } from '../store/user/user.action'
+import { userService } from '../services/user.service'
 
 export function Login() {
     const [credentials, setCredentials] = useState(userService.getEmptyCredentials())

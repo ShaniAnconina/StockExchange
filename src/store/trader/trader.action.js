@@ -1,6 +1,6 @@
-import { traderService } from '../../services/trader.service.js'
-import { SET_TRADERS } from './trader.reducer.js'
 import { store } from '../store.js'
+import { SET_TRADERS } from './trader.reducer.js'
+import { traderService } from '../../services/trader.service.js'
 
 export async function loadTraders() {
     try {

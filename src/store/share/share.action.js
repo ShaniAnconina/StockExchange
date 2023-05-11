@@ -1,6 +1,6 @@
-import { shareService } from '../../services/share.service.js'
-import { SET_SHARES } from './share.reducer.js'
 import { store } from '../store.js'
+import { SET_SHARES } from './share.reducer.js'
+import { shareService } from '../../services/share.service.js'
 
 export async function loadShares() {
     try {
