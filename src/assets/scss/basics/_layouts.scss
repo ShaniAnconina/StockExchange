@@ -1,16 +1,13 @@
 .main-layout {
-    display: block;
-    
-    @media (min-width: 700px) {
-        display: grid;
-        grid-template-columns: 150px 1fr 150px;
+    display: grid;
+    grid-template-columns: 150px 1fr 150px;
 
-        >* {
-            grid-column: 2;
-        }
-    
-        >*.full {
-            grid-column: 1 / -1;
-        }
+    >* {
+        grid-column: 2;
     }
+
+    >*.full {
+        grid-column: 1 / -1;
+    }
+
 }

@@ -6,16 +6,18 @@
     min-height: 200px;
     background-color: $clr2;
 
-    button{
+    button {
         background-color: transparent;
         border-radius: 30px;
         border: 1px $clr9 solid;
         padding: 5px 20px;
         margin: 10px;
         transition: .3s background-color;
+        transition: .1s color;
 
         &:hover {
             background-color: $clr9;
+            color: $clr0;
         }
     }
 }

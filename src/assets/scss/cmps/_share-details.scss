@@ -1,5 +1,5 @@
 .share-details {
-    position: absolute;
+    position: fixed;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
@@ -8,20 +8,41 @@
     border-radius: 5px;
     min-height: 300px;
     min-width: 300px;
-    padding: 20px;
+    padding: 50px;
     color: $clr0;
+    text-align: center;
 
-    button{
-        border: 1px solid transparent;
+    h3{
+        font-size: 1.2rem;
+        margin-top: 30px;
+    }
+
+    button {
+        border: 1px solid $clr9;
         border-radius: 30px;
-        padding: 5px 10px;
+        padding: 5px 20px;
         background-color: transparent;
         color: $clr0;
         font-size: 1.2rem;
-        transition: .2s border-color;
+        transition: .2s background-color;
+        margin: 50px 10px 0 10px;
 
-        &:hover{
-            border-color: $clr9;
+        &:hover {
+            background-color: $clr9;
+        }
+    }
+
+    table {
+        border-collapse: collapse;
+
+        thead {
+            color: $clr9;
+        }
+
+        th {
+            width: 150px;
+            height: 40px;
+            border: 1px solid $clr0;
         }
     }
 }

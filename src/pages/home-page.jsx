@@ -6,7 +6,7 @@ import { ShareDetails } from '../cmps/share/share-details'
 
 export function HomePage() {
     const shares = useSelector((storeState) => storeState.shareModule.shares)
-    const [isModal, setIsModal] = useState(false)
+    const [isModal, setIsModal] = useState(null)
 
     useEffect(() => {
         loadShares()

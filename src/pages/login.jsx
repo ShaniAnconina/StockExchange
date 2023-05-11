@@ -29,10 +29,10 @@ export function Login() {
     return (
         <section className='login'>
             {!loggedinUser && <form className="login-form" onSubmit={onSubmit}>
-                <h1>Hellow Trader,</h1>
+                <h1>Hello Trader,</h1>
                 <h2>Please enter your trader ID to login</h2>
                 <div className="login-form">
-                    < input type="number"
+                    < input type="password"
                         name="id"
                         value={credentials.id}
                         placeholder="Trader ID"
