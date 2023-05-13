@@ -16,8 +16,8 @@ export function AppHeader() {
     function onLogout() {
         try {
             logOut()
-            console.log('You logged out successfully!')
             navigate('/login')
+            alert('You logged out successfully!')
         }
         catch (err) {
             throw err

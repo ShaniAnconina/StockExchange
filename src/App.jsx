@@ -27,6 +27,7 @@ export function App() {
           </main>
         </section>
       </Router>
+      
     </Provider>
   )
 }

@@ -36,11 +36,8 @@
     }
 
     button {
-        background-color: transparent;
         color: $clr0;
-        border-radius: 30px;
         border: 1px $clr3 solid;
-        padding: 5px 20px;
         transition: .3s background-color;
 
         &:hover {

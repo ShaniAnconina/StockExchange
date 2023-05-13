@@ -6,8 +6,8 @@
     background-color: $clr1;
     box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.432);
     border-radius: 5px;
-    min-height: 300px;
-    min-width: 300px;
+    min-height: 425px;
+    min-width: 560px;
     padding: 50px;
     color: $clr0;
     text-align: center;
@@ -19,16 +19,17 @@
 
     button {
         border: 1px solid $clr3;
-        border-radius: 30px;
-        padding: 5px 20px;
         background-color: transparent;
         color: $clr0;
-        font-size: 1.2rem;
         transition: .2s background-color;
         margin: 50px 10px 0 10px;
 
         &:hover {
             background-color: $clr3;
+        }
+
+        &.cancel-req {
+            margin: 7px;
         }
     }
 
@@ -41,8 +42,12 @@
 
         th {
             width: 150px;
-            height: 40px;
+            height: 52px;
             border: 1px solid $clr0;
         }
+    }
+
+    .trade-modal {
+        align-items: center;
     }
 }

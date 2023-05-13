@@ -18,8 +18,8 @@ export function Login() {
         ev.preventDefault()
         try {
             login(credentials)
-            console.log('You logged in successfully!')
             navigate('/')
+            alert('You logged in successfully!')
         }
         catch (err) {
             throw err
