@@ -5,7 +5,7 @@ const initialState = {
 }
 
 export function traderReducer(state = initialState, action) {
-    let traders
+    // let traders
 
     switch (action.type) {
         case SET_TRADERS:

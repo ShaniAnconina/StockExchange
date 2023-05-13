@@ -8,12 +8,14 @@ export function AccountIndex() {
 
     useEffect(() => {
         loadTraderTransactions(loggedinUser.trader_id)
+        console.log('transactions:', transactions)
     }, []
     )
 
     return (
         <section className='account-index'>
             <h1>My Account</h1>
+
         </section>
     )
 }

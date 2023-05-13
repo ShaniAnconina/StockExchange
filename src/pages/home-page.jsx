@@ -15,7 +15,7 @@ export function HomePage() {
 
     return (
         <section className='home-page'>
-            <h1>Shares</h1>
+            <h1>Stock Exchange</h1>
             {shares && <ShareList shares={shares} setIsModal={setIsModal} />}
             {isModal && <ShareDetails isModal={isModal} setIsModal={setIsModal} />}
         </section>

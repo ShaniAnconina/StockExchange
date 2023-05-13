@@ -8,6 +8,7 @@ export const userService = {
     logout,
     getLoggedinUser,
     query,
+    updateTrader
 }
 
 function getEmptyCredentials() {
@@ -26,6 +27,7 @@ async function login(userCred) {
         data: null,
         params: { trader_id: userCred.id }
     })
+    user.data.initialMoney = user.data.money
     _setLoggedinUser(user.data)
     return user.data
 }
@@ -36,16 +38,20 @@ async function logout() {
 
 async function query(traderId) {
     try {
-        const transactions = await axios({
+        const traderTransactions = await axios({
             url: `//localhost:8000/get_last_trader_transactions`,
             method: 'GET',
             data: null,
             params: { trader_id: traderId }
         })
-        return transactions.data
+        return traderTransactions.data
     } catch (err) {
         throw err
     }
+}
+
+function updateTrader(user) {
+    _setLoggedinUser(user)
 }
 
 function getLoggedinUser() {

@@ -1,9 +1,4 @@
-
-
 export function LastTransactions({ transaction }) {
-
-
-
 
     return (
         <>

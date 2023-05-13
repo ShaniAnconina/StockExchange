@@ -5,7 +5,7 @@ const initialState = {
 }
 
 export function shareReducer(state = initialState, action) {
-    let shares
+    // let shares
 
     switch (action.type) {
         case SET_SHARES:
