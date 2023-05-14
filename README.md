@@ -9,16 +9,16 @@ First, a few important points to note about my code:
 5. The sell logic doesnt work too well (on server side).
 6. I assume that I get valid trader_ids and share_ids. Plus, not negative amounts and price_per_share.
 
-# Login page:
+## Login page:
 In order to use the app you must login with a trader ID.
 
-# Stock exchange - homepage:
+## Stock exchange - homepage:
 This page display all the share details (including information on open orders and last transactions) and an option to buy shares, sell shares and cancel trade requests (As long as it hasn't been approved yet)
 
-# Traders page:
+## Traders page:
 This page display all the trader names on the app.
 
-# My account page:
+## My account page:
 On this page the user can check his gain or loss (money and holdings) and his last eight transactions.
 
 
