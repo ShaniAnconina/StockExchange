@@ -7,8 +7,8 @@ export const userService = {
     login,
     logout,
     getLoggedinUser,
+    setLoggedinUser,
     query,
-    updateTrader
 }
 
 function getEmptyCredentials() {
@@ -28,7 +28,8 @@ async function login(userCred) {
         params: { trader_id: userCred.id }
     })
     user.data.initialMoney = user.data.money
-    _setLoggedinUser(user.data)
+    user.data.initialHoldings = user.data.holdings
+    setLoggedinUser(user.data)
     return user.data
 }
 
@@ -50,15 +51,11 @@ async function query(traderId) {
     }
 }
 
-function updateTrader(user) {
-    _setLoggedinUser(user)
-}
-
 function getLoggedinUser() {
     return JSON.parse(localStorage.getItem(STORAGE_KEY_LOGGEDIN))
 }
 
-function _setLoggedinUser(user) {
+function setLoggedinUser(user) {
     localStorage.setItem(STORAGE_KEY_LOGGEDIN, JSON.stringify(user))
     return user
 }

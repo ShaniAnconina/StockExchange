@@ -1,3 +1,30 @@
 .account-index {
     margin-block: 50px;
+
+    .difference {
+        color: $clr3;
+        font-size: 3rem;
+        font-weight: 100;
+    }
+
+    .transactions {
+        margin-top: 70px;
+    }
+    
+    table {
+        display: inline-block;
+        border-collapse: collapse;
+        margin-top: 20px;
+
+        thead {
+            color: $clr3;
+        }
+
+        th {
+            width: 150px;
+            height: 52px;
+            border: 1px solid $clr1;
+        }
+
+    }
 }

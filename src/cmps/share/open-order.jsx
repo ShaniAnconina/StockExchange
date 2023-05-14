@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
 import { shareService } from '../../services/share.service'
+import { userService } from '../../services/user.service'
 
 export function OpenOrder({ order, setIsTrade, setIsModal }) {
     const [share, setShare] = useState({})
@@ -17,6 +18,11 @@ export function OpenOrder({ order, setIsTrade, setIsModal }) {
 
     async function onCancelRequest() {
         await shareService.deleteShare(order.trader_id, order.share_id)
+
+        const trader = userService.getLoggedinUser()
+        console.log('order:', order)
+        trader.money += order.price
+        userService.setLoggedinUser(trader)
         setIsTrade(false)
         setIsModal(null)
         alert('Your request has been successfully cancelled')

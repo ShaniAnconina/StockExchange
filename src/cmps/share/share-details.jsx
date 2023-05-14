@@ -16,7 +16,6 @@ export function ShareDetails({ isModal, setIsModal }) {
     async function getShareDetails() {
         const currShare = await shareService.get(isModal)
         if (currShare.last_transactions && currShare.last_transactions.length > 10) currShare.last_transactions.slice(0, 10)
-
         setShare(currShare)
     }
 
@@ -26,7 +25,7 @@ export function ShareDetails({ isModal, setIsModal }) {
             await shareService.tradeShare(trader.trader_id, share.share_id, +amount, +share.cur_price.toString().substring(0, 7), isSell)
             if (isSell) trader.money += amount
             else trader.money -= amount
-            userService.updateTrader(trader)
+            userService.setLoggedinUser(trader)
             alert(`Your ${isSell ? 'sell' : 'purchase'} made successfully`)
         }
         catch (err) {
